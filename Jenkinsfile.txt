@@ -6,11 +6,7 @@ pipeline {
 		sh "mvn clean compile"
             }
         }
-	stage('Packaging') { 
-            steps {
-		sh "mvn clean package"
-            }
-        }
+	
 		stage('Execution') { 
             steps {
                 sh "java -jar target/Phase5ProjectSpringBoot-0.0.1-SNAPSHOT.jar"
